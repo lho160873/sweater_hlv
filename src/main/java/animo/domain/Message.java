@@ -1,4 +1,4 @@
-package com.example.sweater.domain;
+package animo.domain;
 
 import org.hibernate.validator.constraints.Length;
 

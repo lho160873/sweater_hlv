@@ -1,8 +1,8 @@
-package com.example.sweater.controller;
+package animo.controller;
 
-import com.example.sweater.domain.User;
-import com.example.sweater.domain.dto.CaptchaResponseDto;
-import com.example.sweater.service.UserSevice;
+import animo.domain.User;
+import animo.domain.dto.CaptchaResponseDto;
+import animo.service.UserSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;

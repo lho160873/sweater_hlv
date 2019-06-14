@@ -1,4 +1,4 @@
-package com.example.sweater.config;
+package animo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

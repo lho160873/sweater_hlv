@@ -1,8 +1,8 @@
-package com.example.sweater.controller;
+package animo.controller;
 
-import com.example.sweater.domain.Role;
-import com.example.sweater.domain.User;
-import com.example.sweater.service.UserSevice;
+import animo.domain.Role;
+import animo.service.UserSevice;
+import animo.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

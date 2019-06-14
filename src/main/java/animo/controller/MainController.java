@@ -1,8 +1,8 @@
-package com.example.sweater.controller;
+package animo.controller;
 
-import com.example.sweater.domain.Message;
-import com.example.sweater.domain.User;
-import com.example.sweater.repos.MessageRepo;
+import animo.repos.MessageRepo;
+import animo.domain.Message;
+import animo.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

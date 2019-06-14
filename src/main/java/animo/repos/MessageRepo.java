@@ -1,6 +1,6 @@
-package com.example.sweater.repos;
+package animo.repos;
 
-import com.example.sweater.domain.Message;
+import animo.domain.Message;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

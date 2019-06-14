@@ -1,4 +1,4 @@
-package com.example.sweater.controller;
+package animo.controller;
 
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
