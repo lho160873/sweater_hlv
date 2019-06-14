@@ -24,7 +24,7 @@ public class Developer {
         this.comment = comment;
     }
 
-
+	
     public void setFio(String fio) {
         this.fio = fio;
     }
@@ -48,9 +48,5 @@ public class Developer {
     public String getComment() {
         return comment != null ? comment   : "<none>";
     }
-
-
-
-
 
 }
