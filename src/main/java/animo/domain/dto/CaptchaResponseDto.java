@@ -1,8 +1,5 @@
 package animo.domain.dto;
 
-/**
- * Created by Lida on 29.05.2019.
- */
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

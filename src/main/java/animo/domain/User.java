@@ -10,8 +10,6 @@ import java.util.Collection;
 import java.util.Objects;
 import java.util.Set;
 
-
-
 @Entity
 @Table(name = "users")
 public class User implements UserDetails {
@@ -32,26 +30,7 @@ public class User implements UserDetails {
     private String email;
     private String activationCode;
 
-    public User() {
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getActivationCode() {
-        return activationCode;
-    }
-
-    public void setActivationCode(String activationCode) {
-        this.activationCode = activationCode;
-    }
-
-    @ElementCollection(targetClass = Role.class,fetch = FetchType.EAGER)
+    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
@@ -59,17 +38,8 @@ public class User implements UserDetails {
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Message> messages;
 
-    public Set<Message> getMessages() {
-        return messages;
-    }
-
-    public void setMessages(Set<Message> messages) {
-        this.messages = messages;
-    }
-
     @Override
     public boolean equals(Object o) {
-
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
@@ -82,17 +52,15 @@ public class User implements UserDetails {
         return Objects.hash(id);
     }
 
-    public boolean isAdmin()
-    {
+    public boolean isAdmin() {
         return roles.contains(Role.ADMIN);
     }
 
-
     public Long getId() {
-        return id != null ? id   : -1;
+        return id;
     }
 
-    public void setId(Long user_id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -153,5 +121,27 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getActivationCode() {
+        return activationCode;
+    }
+
+    public void setActivationCode(String activationCode) {
+        this.activationCode = activationCode;
+    }
+
+    public Set<Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(Set<Message> messages) {
+        this.messages = messages;
+    }
 }
