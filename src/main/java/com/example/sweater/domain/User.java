@@ -11,15 +11,18 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "usr")
+@Table(name = "users")
 public class User implements UserDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_key_gen"  )
+    @SequenceGenerator(name = "id_key_gen", sequenceName = "users_user_id_seq", allocationSize=1)
+    @Column(name = "user_id", unique = true, nullable = false)
     private Long id;
     @NotBlank(message = "Username cannot be empty")
     private String username;
     @NotBlank(message = "Password cannot be empty")
     private String password;
+
     private boolean active;
 
     @Email(message = "Email is not correct")
